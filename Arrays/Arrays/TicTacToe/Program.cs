@@ -47,12 +47,16 @@ namespace TicTacToe
                     Thread.Sleep(2000);
                 }
                 flag = CheckWin();
-            } while (flag != 1 && flag != -1);
-            Console.Clear();
-            Board();
+            }
+            while (flag != 1 && flag != -1);
+            {
+                Console.Clear();
+                Board();
+            }
             if (flag == 1)
             {
                 Console.WriteLine("Player {0} has won", (player % 2) + 1);
+                Console.WriteLine("Press ENTER to exit");
             }
             else
             {
