@@ -2,9 +2,9 @@
 
 namespace Classes4
 {
-    class Program
+	class Program
     {
-        static void Main(string[] args)
+		static void Main(string[] args)
         {
 			Movie movie = new Movie("PG-13", "Eon Productions", "Casino Royale");
 			Movie movie1 = new Movie("PG-13", "Buena Vista International", "Glass");
@@ -17,7 +17,7 @@ namespace Classes4
 			Console.Write("The movie title is " + movie1.GetTitle());
 			Console.Write(", the studio " + movie1.Getstudio());
 			Console.Write(", and the rating " + movie1.GetRating());
-			Console.WriteLine("\n");
+		    Console.WriteLine("\n");
 			Console.WriteLine("-----------------------------------");
 			Console.Write("The movie title is " + movie2.GetTitle());
 			Console.Write(", the studio " + movie2.Getstudio());
