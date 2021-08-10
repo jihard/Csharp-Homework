@@ -23,7 +23,7 @@ namespace Classes4
 			Console.Write(", the studio " + movie2.Getstudio());
 			Console.Write(", and the rating " + movie2.GetRating());
 			Console.WriteLine("\n");
-			Console.WriteLine("-----------------------------------");
-		}
+		    Console.WriteLine("-----------------------------------");
+	    }
     }
 }
