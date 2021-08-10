@@ -10,6 +10,10 @@ namespace BankAccount
     {
         static void Main(string[] args)
         {
+            Account benben = new Account("Benson $", decimal.Round((decimal)-17.50m, 2, MidpointRounding.AwayFromZero)); 
+            Account butkus = new Account("Ivo $", decimal.Round((decimal)17.25, 2, MidpointRounding.AwayFromZero));
+            benben.ShowUserNameAndBalance();
+            butkus.ShowUserNameAndBalance();
         }
     }
 }
