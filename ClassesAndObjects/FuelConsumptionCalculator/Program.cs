@@ -10,31 +10,28 @@ namespace FuelConsumptionCalculator
     {
         private static void Main(string[] args)
         {
-            int startKilometers;
-            int liters;
-            
+             int startKilometers;
             Console.WriteLine();
-
-            Car car = new Car(0);
-            Car car1 = new Car(0);
-            for (int i = 0; i < 3; i++)
+            int liters;
+            int counter = 1;
+            Car car = new(0);
+            Car car1 = new(0);
+            for (int i = 0; i < 4; i++)
             {
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
+                Console.WriteLine("Pease enter {0} reading of bmw - kilometrs: ", counter);
+                startKilometers = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter bmw raiding used litres: ");
                 liters = Convert.ToInt32(Console.ReadLine());
                 car.FillUp(startKilometers, liters);
-                
-                Console.Write("Enter first reading: ");
-                startKilometers = Convert.ToInt32(Console.ReadLine());    
-                Console.Write("Enter liters reading: ");
+                Console.WriteLine("Please enter {0} reading of opelis - kilometrs: ", counter);
+                startKilometers = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter opelis raiding used litres: ");
                 liters = Convert.ToInt32(Console.ReadLine());
                 car1.FillUp(startKilometers, liters);
+                counter++;
             }
-
-            Console.WriteLine("Kilometers per liter are " + car.CalculateConsumption() + " gasHog:" + car.GasHog());
-            Console.WriteLine("Car1 Kilometers per liter are " + car1.CalculateConsumption()+ " economyCar:" + car.EconomyCar());
-            Console.ReadKey();
+            Console.WriteLine("BMW Kilometers per liter are " +(Math.Round( car.CalculateConsumption()) + " gasHog: " + car.GasHog()));
+            Console.WriteLine("Opelis Kilometers per liter are " +(Math.Round(car1.CalculateConsumption()) + "  geconomyCar: " + car.EconomyCar()));
         }
     }
 }

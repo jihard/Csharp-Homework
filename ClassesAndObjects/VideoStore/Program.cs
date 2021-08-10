@@ -20,7 +20,6 @@ namespace VideoStore
                 Console.WriteLine("Choose 2 to rent video (as user)");
                 Console.WriteLine("Choose 3 to return video (as user)");
                 Console.WriteLine("Choose 4 to list inventory");
-
                 int n = Convert.ToByte(Console.ReadLine());
 
                 switch (n)
