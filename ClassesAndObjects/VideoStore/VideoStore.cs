@@ -32,7 +32,7 @@ namespace VideoStore
         public void TakeUsersRating(double rating, string title)
         {
             var movie = FindMovieByTitle(title);
-                movie?.ReceivingRating(rating);
+            movie?.ReceivingRating(rating);
         }
 
         public void ListInventory()
@@ -42,6 +42,7 @@ namespace VideoStore
                 Console.WriteLine(movie.ToString());
             }
         }
+
         private Video FindMovieByTitle(string title)
         {
             foreach (var movie in _movies)

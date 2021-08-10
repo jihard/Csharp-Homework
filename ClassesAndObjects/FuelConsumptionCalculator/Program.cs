@@ -10,7 +10,7 @@ namespace FuelConsumptionCalculator
     {
         private static void Main(string[] args)
         {
-             int startKilometers;
+            int startKilometers;
             Console.WriteLine();
             int liters;
             int counter = 1;

@@ -55,10 +55,8 @@ namespace VideoStore
             {
                 Console.WriteLine("Enter movie name");
                 string movieName = Console.ReadLine();
-
                 Console.WriteLine("Enter rating");
                 int rating = Convert.ToInt16(Console.ReadLine());
-
                 _videoStore.AddVideo(movieName);
                 _videoStore.TakeUsersRating(rating, movieName);
             }

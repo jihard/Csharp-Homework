@@ -25,8 +25,10 @@ namespace Classes2
             if (_currentMilage < 999999)
             {
                 _currentMilage++;
-                if (_currentMilage % 10 == 0)
-                    _fuelGauge.DecreseLevel();
+            }
+            if (_currentMilage % 10 == 0)
+            {
+                _fuelGauge.DecreseLevel();
             }
             else
             {
