@@ -2,13 +2,17 @@
 {
     public class Car
     {
-       private double carspresentMileage,carliters; 
-        
-        public Car(double startOdo) => carspresentMileage = startOdo;
+       private double cars_present_Mileage;
+        private double cars_liters;
+
+        public Car(double startOdo)
+        {
+            cars_present_Mileage = startOdo;
+        }
         
         public double CalculateConsumption()
         {
-            return carspresentMileage / carliters;
+            return cars_present_Mileage / cars_liters; 
         }
 
         private double ConsumptionPer100Km()
@@ -42,8 +46,8 @@
 
         public void FillUp(int mileage, double liters)
         {
-            carliters += liters;
-            carspresentMileage += mileage;
+            cars_liters += liters;
+            cars_present_Mileage += mileage;
         }
     }
 }

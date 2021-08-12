@@ -8,22 +8,25 @@ namespace Classes10
 {
     class Account
     {
-        private string Name;
+        private string _name;
         private decimal Balance;
 
         public Account(string name, decimal balance)
         {
-            Name = name;
+            _name = name;
             Balance = balance; 
         }
 
         public void ShowUserNameAndBalance()
         {
             if (Balance > 0)
-            Console.WriteLine($"{Name}{Balance}");
+            {
+                Console.WriteLine($"{_name}{Balance}");
+            }
             else
-            Console.WriteLine($"{Name}{Balance}");
+            {
+                Console.WriteLine($"{_name}{Balance}");
+            }
         }
     }
 }
-

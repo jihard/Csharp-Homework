@@ -10,51 +10,51 @@ namespace Account
     {
         private static void Main(string[] args)
         {
-            Bartsaccounttransmission();
-            Mattsaccounttransmission();
+            Barts_account_transmission();
+            Matts_account_transmission();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Account to Account ");
             Console.ForegroundColor = ConsoleColor.White;
-            BankaccountToBankaccount();
+            Bankaccount_To_Bankaccount();
 
-            static void Bartsaccounttransmission()
+            static void Barts_account_transmission()
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Bartos bank account at start");
                 Console.ForegroundColor = ConsoleColor.White;
-                var bartosbankaccount = new Account("Bartos account", 100.00);
-                var bartosSwitzerlandbankAccount = new Account("Bartos bank account in Switzerland", 1000000.00);
-                Console.WriteLine(bartosbankaccount);
-                Console.WriteLine(bartosSwitzerlandbankAccount);
+                var bartos_bank_account = new Account("Bartos account", 100.00);
+                var bartos_Switzerland_bankAccount = new Account("Bartos bank account in Switzerland", 1000000.00);
+                Console.WriteLine(bartos_bank_account);
+                Console.WriteLine(bartos_Switzerland_bankAccount);
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Bartos account after transactions"); 
                 Console.ForegroundColor = ConsoleColor.White;
-                bartosbankaccount.Withdraw(20);
-                bartosSwitzerlandbankAccount.Deposit(200);
-                Console.WriteLine(bartosbankaccount);
-                Console.WriteLine(bartosSwitzerlandbankAccount);
+                bartos_bank_account.Withdraw(20);
+                bartos_Switzerland_bankAccount.Deposit(200);
+                Console.WriteLine(bartos_bank_account);
+                Console.WriteLine(bartos_Switzerland_bankAccount);
             }
 
-            static void Mattsaccounttransmission()
+            static void Matts_account_transmission()
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Matts bank account");
                 Console.ForegroundColor = ConsoleColor.White;
-                var mattsbankaccount = new Account("Matts account", 1000);
-                var mybankaccount = new Account("My account", 0);
-                var money = mattsbankaccount.Withdraw(100);
-                mybankaccount.Deposit(money);
-                Console.WriteLine(mattsbankaccount);
-                Console.WriteLine(mybankaccount);
+                var matts_bank_account = new Account("Matts account", 1000);
+                var my_bank_account = new Account("My account", 0);
+                var money = matts_bank_account.Withdraw(100);
+                my_bank_account.Deposit(money);
+                Console.WriteLine(matts_bank_account);
+                Console.WriteLine(my_bank_account);
             }
 
-            static void BankaccountToBankaccount()
+            static void Bankaccount_To_Bankaccount()
             {
                 var aAccount = new Account("A", 100.00);
                 var bAccount = new Account("B", 0);
                 var cAccount = new Account("C", 0);
-                AccountTOAccount(aAccount, bAccount, 50.0);
-                AccountTOAccount(bAccount, cAccount, 25.0);
+                Account_TO_Account(aAccount, bAccount, 50.0);
+                Account_TO_Account(bAccount, cAccount, 25.0);
                 Console.WriteLine(aAccount);
                 Console.WriteLine(bAccount);
                 Console.WriteLine(cAccount);
@@ -62,10 +62,11 @@ namespace Account
             }
         }
 
-        public static void AccountTOAccount(Account from, Account to, double howMuch)
+        public static void Account_TO_Account(Account from, Account to, double howMuch)
         {
             var money = from.Withdraw(howMuch);
             to.Deposit(money);
         }    
     }
 }
+

@@ -5,46 +5,48 @@ namespace Classes4
 {
     public class Movie
     {
-        String rating;
-        String studio;
-        String title;
-        public Movie()
-        {
-            rating = "";
-            studio = "";
-            title = "";
-        }
-        public Movie(String aRating, string aStudio, String aTitle)
+        string rating;
+        string studio;
+        string title;
+
+        public Movie(string aRating, string aStudio, string aTitle)
         {
             rating = aRating;
             studio = aStudio;
             title = aTitle;
         }
-        public String GetRating()
+
+        public string GetRating()
         {
             return rating;
         }
-        public void SetRating(String aRating)
+
+        public void SetRating(string aRating)
         {
             rating = aRating;
         }
+
         public string Getstudio()
         {
             return studio;
         }
+
         public void Setstudio(string aStudio)
         {
             studio = aStudio;
         }
-        public String GetTitle()
+
+        public string GetTitle()
         {
             return title;
         }
-        public void SetTitle(String aTitle)
+
+        public void SetTitle(string aTitle)
         {
             title = aTitle;
         }
-        public Boolean equals(Object obj)
+
+        public bool quals(object obj)
         {
             if (obj == null)
             {
@@ -53,8 +55,7 @@ namespace Classes4
             else
             {
                 Movie other = (Movie)obj;
-                return (rating.Equals(other.rating) && studio == other.studio
-                && title.Equals(other.title));
+                return (rating.Equals(other.rating) && studio == other.studio && title.Equals(other.title));
             }
         }
     }
