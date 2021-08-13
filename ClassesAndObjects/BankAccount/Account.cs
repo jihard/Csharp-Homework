@@ -9,23 +9,23 @@ namespace Classes10
     class Account
     {
         private string _name;
-        private decimal Balance;
+        private decimal _balance;
 
         public Account(string name, decimal balance)
         {
             _name = name;
-            Balance = balance; 
+            _balance = balance; 
         }
 
         public void ShowUserNameAndBalance()
         {
-            if (Balance > 0)
+            if (_balance > 0)
             {
-                Console.WriteLine($"{_name}{Balance}");
+                Console.WriteLine($"{_name}{_balance}");
             }
             else
             {
-                Console.WriteLine($"{_name}{Balance}");
+                Console.WriteLine($"{_name}{_balance}");
             }
         }
     }
