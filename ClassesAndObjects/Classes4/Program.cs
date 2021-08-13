@@ -5,7 +5,7 @@ namespace Classes4
     class Program
     {
 	    static void Main(string[] args)
-			{
+		{
 		Movie movie = new Movie("PG-13", "Eon Productions", "Casino Royale");
 		Movie movie1 = new Movie("PG-13", "Buena Vista International", "Glass");
 		Movie movie2 = new Movie("PG", "Columbia Pictures", "Spider-Man: Into the Spider-Verse");
@@ -25,5 +25,5 @@ namespace Classes4
 		Console.WriteLine("\n");
 		Console.WriteLine("-----------------------------------");
 	    }
-		}
+	  }
 }
