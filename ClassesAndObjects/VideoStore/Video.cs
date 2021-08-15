@@ -4,41 +4,47 @@ namespace VideoStore
 {
     class Video
     {
+        private string _title;
+        private bool _avalible;
+        private List<double> _ratings;
+
         public Video(string title)
         {
-            
+            _title = title;
+            _avalible = true;
+            _ratings = new List<double>();
         }
 
         public void BeingCheckedOut()
         {
-            
+            _avalible = false;
         }
 
         public void BeingReturned()
         {
-            
+            _avalible = true;
         }
 
         public void ReceivingRating(double rating)
         {
-            
+            _ratings.Add(rating);
         }
 
         public double AverageRating()
         {
-            return 0;
+            return _ratings.Average();
         }
 
         public bool Available()
         {
-            return true;
+            return _avalible;
         }
 
-        public string Title => "";
+        public string Title => _title;
 
         public override string ToString()
         {
-            return $"{Title} {AverageRating()} {Available()}";
+            return $"Title: {Title}, Rating: {AverageRating()}, avilable: {Available()}";
         }
     }
 }

@@ -20,7 +20,6 @@ namespace VideoStore
                 Console.WriteLine("Choose 2 to rent video (as user)");
                 Console.WriteLine("Choose 3 to return video (as user)");
                 Console.WriteLine("Choose 4 to list inventory");
-
                 int n = Convert.ToByte(Console.ReadLine());
 
                 switch (n)
@@ -56,10 +55,8 @@ namespace VideoStore
             {
                 Console.WriteLine("Enter movie name");
                 string movieName = Console.ReadLine();
-
                 Console.WriteLine("Enter rating");
                 int rating = Convert.ToInt16(Console.ReadLine());
-
                 _videoStore.AddVideo(movieName);
                 _videoStore.TakeUsersRating(rating, movieName);
             }
