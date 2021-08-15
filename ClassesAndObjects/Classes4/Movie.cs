@@ -46,7 +46,7 @@ namespace Classes4
             title = aTitle;
         }
 
-        public bool Is_movie_there(object obj)
+        public bool IsMovieThere(object obj)
         {
             if (obj == null)
             {
