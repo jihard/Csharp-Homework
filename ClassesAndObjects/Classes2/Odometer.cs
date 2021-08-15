@@ -8,24 +8,26 @@ namespace Classes2
 {
     class Odometer
     {
+        private readonly FuelGauge _fuelGauge;
+        private int _currentMilage;
+
         public Odometer(FuelGauge fuelGauge)
         {
             _fuelGauge = fuelGauge;
         }
 
-        private readonly FuelGauge _fuelGauge;
-        private int _currentMilage;
-
         public int Report()
         {
             return _currentMilage;
         }
+
         public void Increment()
         {
             if (_currentMilage < 999999)
             {
                 _currentMilage++;
             }
+
             if (_currentMilage % 10 == 0)
             {
                 _fuelGauge.DecreseLevel();

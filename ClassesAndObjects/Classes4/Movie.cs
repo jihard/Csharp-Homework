@@ -46,7 +46,7 @@ namespace Classes4
             title = aTitle;
         }
 
-        public bool quals(object obj)
+        public bool ChekingMovies(object obj)
         {
             if (obj == null)
             {
