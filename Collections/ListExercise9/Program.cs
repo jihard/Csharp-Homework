@@ -10,7 +10,9 @@ namespace ListExercise9
     {
         static void Main(string[] args)
         {
-            var firstList = new List<string>
+            Console.WriteLine("Joined colletion lists");
+            Console.WriteLine("----------------------");
+            List<string> firstList = new List<string>
             {
                 "Red",
                 "Green",
@@ -18,21 +20,27 @@ namespace ListExercise9
                 "White",
                 "Pink"
             };
-
+            for (int i = 0; i < firstList.Count; i++)
+            {
+                Console.WriteLine(firstList[i]);
+            }
+            List<string> secondList = new List<string>
+            {
+                "Red",
+                "Green",
+                "Black",
+                "White",
+                "Pink"
+            };
+            for (int i = 0; i < secondList.Count; i++)
+            {
+                Console.WriteLine(secondList[i]);
+            }
+            Console.WriteLine("-------------------------");
+            Console.WriteLine("Seperated colletion lists");
+            Console.WriteLine("-------------------------");
             Console.WriteLine(string.Join(",", firstList));
-
-            var secondList = new List<string>
-            {
-                "Red",
-                "Green",
-                "Black",
-                "White",
-                "Pink"
-            };
-
             Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
         }
     }
 }

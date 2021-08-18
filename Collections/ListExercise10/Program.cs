@@ -10,23 +10,20 @@ namespace ListExercise10
     {
         static void Main(string[] args)
         {
-            var colors = new List<string>
-            {
-                "Red",
-                "Green",
-                "Black",
-                "White",
-                "Pink"
-            };
-
+            List<string> colors = new List<string>();
+            colors.Add("Red");
+            colors.Add("Green");
+            colors.Add("Orange");
+            colors.Add("White");
+            colors.Add("Black");
             Console.WriteLine("Original array list: ");
-            Console.WriteLine(string.Join(",", colors));
-
-            //TODO: Remove all elements from list
-            //...
-
+            foreach (string item in colors)
+            {
+                Console.WriteLine(item);
+            }
             Console.WriteLine("New array list: ");
-            Console.WriteLine(string.Join(",", colors));
+            colors.Clear();
         }
     }
 }
+

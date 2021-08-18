@@ -10,19 +10,27 @@ namespace ListExercise5
     {
         static void Main(string[] args)
         {
-            var colors = new List<string>
-            {
+             List<string> colors = new List<string>
+             {
                 "Red",
                 "Green",
                 "Violet",
                 "White",
                 "Black"
-            };
-
+             };
+            Console.WriteLine("--------------------");
             Console.WriteLine(string.Join(",", colors));
-
-            //TODO: Change the third element with "Yellow"
-
+            for (int i = 0; i < colors.Count; i++)
+            {
+                if (colors[i].Contains("Violet"))
+                {
+                    Console.WriteLine("--------------------");
+                    Console.Write("Color changing to: ");
+                    colors[i] = "Yellow";
+                    Console.WriteLine(colors[i]);
+                    Console.WriteLine("--------------------");
+                }
+            }
             Console.WriteLine(string.Join(",", colors));
         }
     }
