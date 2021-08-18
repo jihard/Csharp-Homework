@@ -9,9 +9,8 @@ namespace FlightPlanner
 {
     public class Flights
     {
-
         private const string _path = "../../flights.txt";
-
+        
         private static void Main(string[] args)
         {
             bool showMenu = true;
@@ -36,14 +35,11 @@ namespace FlightPlanner
                     Console.Clear();
                     Console.WriteLine($"\n{text}\n");
                     return true;
-
                 case "2":
                     Tripmaker();
                     return true;
-
                 case "#":
                     return false;
-
                 default:
                     return true;
             }

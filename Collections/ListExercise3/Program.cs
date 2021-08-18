@@ -10,7 +10,7 @@ namespace ListExercise3
     {
         static void Main(string[] args)
         {
-           Collection<string> colors = new Collection<string>();
+            Collection<string> colors = new Collection<string>();
             colors.Add("\nRed");
             colors.Add("\nGreen");
             colors.Add("\nOrange");

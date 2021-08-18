@@ -10,7 +10,7 @@ namespace ListExercise7
     {
         static void Main(string[] args)
         {
-           List<string> colors = new List<string>
+            List<string> colors = new List<string>
             {
                 "Red",
                 "Green",
