@@ -10,14 +10,14 @@ namespace ListExercise5
     {
         static void Main(string[] args)
         {
-             List<string> colors = new List<string>
-             {
+            List<string> colors = new List<string>
+            {
                 "Red",
                 "Green",
                 "Violet",
                 "White",
                 "Black"
-             };
+            };
             Console.WriteLine("--------------------");
             Console.WriteLine(string.Join(",", colors));
             for (int i = 0; i < colors.Count; i++)
