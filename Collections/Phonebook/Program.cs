@@ -20,7 +20,6 @@ namespace Phonebook
             Console.WriteLine("Number for Fred is " + directory.GetNumber("Fred"));
             Console.WriteLine("Number for Wilma is " + directory.GetNumber("Wilma"));
             Console.WriteLine("Number for Tom is " + directory.GetNumber("Tom"));
-
         }
     }
 }
