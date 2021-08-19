@@ -4,61 +4,41 @@ namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private PhoneEntry[] _data;
-        private int _dataCount;
+        private SortedDictionary<string, int> _phoneDirectory;
 
-        public PhoneDirectory() {
-            _data = new PhoneEntry[1];
-            _dataCount = 0;
+        public PhoneDirectory()
+        {
+            _phoneDirectory = new SortedDictionary<string, int>();
         }
 
-        private int Find(string name) {
-            for (var i = 0; i < _dataCount; i++) 
+        public int? GetNumber(string name)
+        {
+            foreach (var phone in _phoneDirectory)
             {
-                if (_data[i].name.Equals(name)) 
+                if (_phoneDirectory.ContainsKey(name))
                 {
-                    return i;
+                    return _phoneDirectory[name];
                 }
             }
-
-            return -1;
+            return null;
         }
 
-        public string GetNumber(string name) 
+        public int? ListNumbers()
         {
-            var position = Find(name);
-            if (position == -1) 
+            foreach (KeyValuePair<string, int> phone in _phoneDirectory)
             {
-                return null;
-            } 
-            else 
-            {
-                return _data[position].number;
+                Console.WriteLine($"Name: {phone.Key}, Phone number: {phone.Value}");
             }
+            return null;
         }
 
-        public void PutNumber(string name, string number) 
+        public void PutNumber(string name, string number)
         {
-            if (name == null || number == null) 
+            int newnumber = Convert.ToInt32(number);
+            _phoneDirectory.Add(name, newnumber);
+            if (name == "" || number == "")
             {
-                throw new Exception("name and number cannot be null");
-            }
-
-            var i = Find(name);
-            if (i >= 0) 
-            {
-                _data[i].number = number;
-            }
-            else 
-            {
-                if (_dataCount == _data.Length) 
-                {
-                    Array.Resize(ref _data, (2 * _data.Length));
-                }
-
-                var newEntry = new PhoneEntry {name = name, number = number}; // Create a new pair.
-                _data[_dataCount] = newEntry;   // Add the new pair to the array.
-                _dataCount++;
+                Console.WriteLine(" name and number cannot be empty ");
             }
         }
     }

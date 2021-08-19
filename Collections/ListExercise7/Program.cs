@@ -10,7 +10,7 @@ namespace ListExercise7
     {
         static void Main(string[] args)
         {
-            var colors = new List<string>
+            List<string> colors = new List<string>
             {
                 "Red",
                 "Green",
@@ -18,16 +18,14 @@ namespace ListExercise7
                 "White",
                 "Black"
             };
-
-            //      TODO: Check if list contains "White" element
-            //        if (...) 
-            //        {
-            //            Console.WriteLine("Found the element");
-            //        } 
-            //        else 
-            //        {
-            //            Console.WriteLine("There is no such element");
-            //        }
+            if (colors.Contains("White"))
+            {
+                Console.WriteLine("Found the color");
+            }
+            else
+            {
+                Console.WriteLine("There is no such color");
+            }
         }
     }
 }

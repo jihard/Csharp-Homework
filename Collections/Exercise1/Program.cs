@@ -8,25 +8,59 @@ namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            string[] array = { "Audi", "BMW", "Honda", "VolksWagen", "Mercedes", "Tesla" };
+            string[] country = { "Germany", "Germany", "Japan", "Germany", "Germany", "USA" };
+            string join = " <--------> ";
 
-            //todo - replace array with an List and print out the results
+            Dictionary<string, string> dice = new Dictionary<string, string>();
+            for (int i = 0; i < country.Length; i++)
+            {
+                dice.Add(array[i], country[i]);
+            }
+            Console.WriteLine(string.Join(", ", dice));
+            Console.WriteLine("----------------------------------------------------");
 
-            //todo - replace array with a HashSet and print out the results
+            var carList = array.ToList();
+            for (int i = 0; i < carList.Count; i++)
+            {
+                string car = carList[i];
+                string carModels;
+                if (car == "Tesla")
+                {
+                    carModels = "USA";
+                }
+                else if (car == "Honda")
+                {
+                    carModels = "Japan";
+                }
+                else
+                {
+                    carModels = "Germany";
+                }
+                Console.WriteLine(car + join + carModels);
+            }
+            Console.WriteLine("--------------------------------------------");
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            var hash = new HashSet<string>(array);
+            foreach (var car in hash)
+            {
+                string carModels;
+                if (car == "Tesla")
+                {
+                    carModels = "USA";
+                }
+                else if (car == "Honda")
+                {
+                    carModels = "Japan";
+                }
+                else
+                {
+                    carModels = "Germany";
+                }
+                Console.WriteLine(car + join + carModels);
+            }
         }
     }
 }
