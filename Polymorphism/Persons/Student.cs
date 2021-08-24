@@ -7,7 +7,7 @@ namespace Persons
         private double _gpa;
 
         public Student(string firstname, string lastname, int age, string address, double gpa)
-            : base(age, firstname, lastname, address) => _gpa = gpa;
+        : base(age, firstname, lastname, address) => _gpa = gpa;
 
         public double Gpa
         {

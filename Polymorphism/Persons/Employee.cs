@@ -7,7 +7,7 @@ namespace Persons
         public string _jobTitle;
 
         public Employee(string firstname, string lastname, int age, string address, string jobTitle)
-            : base(age, firstname, lastname, address) => _jobTitle = jobTitle;
+        : base(age, firstname, lastname, address) => _jobTitle = jobTitle;
 
         public void DisplayEmployee()
         {
