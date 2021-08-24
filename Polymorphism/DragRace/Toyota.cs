@@ -1,24 +1,24 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Tesla : Car
+    public class Toyota : Car
     {
         private int _currentSpeed = 0;
 
         public string ModelName()
         {
-            return "Tesla Model 3";
+            return "Toyota Auris";
         }
 
         public void SpeedUp()
         {
-            _currentSpeed += 12;
+            _currentSpeed += 15;
         }
 
         public void SlowDown()
         {
-            _currentSpeed -= 5;
+            _currentSpeed -= 7;
         }
 
         public string ShowCurrentSpeed()
@@ -28,7 +28,7 @@ namespace DragRace
 
         public void StartEngine()
         {
-            Console.WriteLine("Tesla Model 3: -- silence ---");
+            Console.WriteLine("Toyota Auris: Rrrrrrr.....");
         }
     }
 }

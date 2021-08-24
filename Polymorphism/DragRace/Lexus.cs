@@ -2,33 +2,38 @@ using System;
 
 namespace DragRace
 {
-    public class Lexus
+    public class Lexus : Car, Nitro
     {
-        private int currentSpeed = 0;
+        private int _currentSpeed = 0;
 
-        public void SpeedUp() 
+        public string ModelName()
         {
-            currentSpeed;
+            return "Lexus ES 200 ";
         }
 
-        public void SlowDown() 
+        public void SpeedUp()
         {
-            currentSpeed;
+            _currentSpeed += 17;
         }
 
-        public string ShowCurrentSpeed() 
+        public void SlowDown()
         {
-            return currentSpeed.ToString();
+            _currentSpeed -= 3;
         }
 
-        public void UseNitrousOxideEngine() 
+        public string ShowCurrentSpeed()
         {
-            currentSpeed;
+            return _currentSpeed.ToString();
         }
 
-        public void StartEngine() 
+        public void UseNitrousOxideEngine()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            _currentSpeed += 35;
+        }
+
+        public void StartEngine()
+        {
+            Console.WriteLine("Lexus ES 200: Rrrrrrr.....");
         }
     }
 }
