@@ -2,11 +2,11 @@ using System;
 
 namespace MakeSounds
 {
-    public class Firework: ISound
+    public class Firework : ISound
     {
         public void PlaySound()
         {
-            Console.WriteLine("whoosh-bang");
+            Console.WriteLine("\nFirework: wiiiii-bang");
         }
     }
 }
