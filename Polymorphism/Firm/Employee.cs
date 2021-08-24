@@ -8,7 +8,7 @@ namespace Firm
         protected double payRate;
 
         public Employee(string eName, string eAddress, string ePhone,
-            string socSecNumber, double rate) : base(eName, eAddress, ePhone)
+        string socSecNumber, double rate) : base(eName, eAddress, ePhone)
         {
             socialSecurityNumber = socSecNumber;
             payRate = rate;

@@ -40,9 +40,13 @@ namespace Firm
                 Console.WriteLine(staff);
                 var amount = staff.Pay();
                 if (amount == 0.00)
+                { 
                     Console.WriteLine("Thanks!");
-                else
+                }
+                else 
+                { 
                     Console.WriteLine("Paid: " + amount);
+                }
                 Console.WriteLine("-----------------------------------");
             }
         }

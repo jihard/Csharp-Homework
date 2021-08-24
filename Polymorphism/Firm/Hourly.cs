@@ -5,7 +5,7 @@ namespace Firm
         private int _hoursWorked;
        
         public Hourly(string eName, string eAddress, string ePhone, string socSecNumber, double rate) : base(eName,
-            eAddress, ePhone, socSecNumber, rate)
+        eAddress, ePhone, socSecNumber, rate)
         {
             _hoursWorked = 0;
         }

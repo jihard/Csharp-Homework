@@ -8,7 +8,7 @@ namespace Firm
         private double _comissionRate;
 
         public Commission(string eName, string eAddress, string ePhone, string socSecNumber, double rate, double comissionRate)
-            : base(eName, eAddress, ePhone, socSecNumber, rate)
+        : base(eName, eAddress, ePhone, socSecNumber, rate)
         {
             _comissionRate = comissionRate;
         }
