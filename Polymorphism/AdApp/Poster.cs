@@ -10,7 +10,7 @@ namespace AdApp
         private int _costPerCopy;
 
         public Poster(int fee, int height, int width,
-            int copies, int costPerCopy) : base(fee)
+        int copies, int costPerCopy) : base(fee)
         {
             _copies = copies;
             _costPerCopy = costPerCopy;
