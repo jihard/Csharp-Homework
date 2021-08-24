@@ -4,7 +4,7 @@ namespace Hierarchy
 {
     public abstract class FelineType : MammalType
     {
-        private string breed;
+        private string _breed;
 
         protected FelineType(string name, double weight, string livingRegion, string breed)
         : base(name, weight, livingRegion)
@@ -14,8 +14,8 @@ namespace Hierarchy
 
         public string Breed
         {
-            get { return this.breed; }
-            set { this.breed = value; }
+            get { return this._breed; }
+            set { this._breed = value; }
         }
     }
 }

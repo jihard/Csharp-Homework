@@ -4,9 +4,9 @@ namespace Hierarchy
 {
     public abstract class Animal
     {
-        private string name;
-        private double weight;
-        private int foodEaten;
+        private string _name;
+        private double _weight;
+        private int _foodEaten;
 
         protected Animal(string name, double weight)
         {
@@ -16,20 +16,20 @@ namespace Hierarchy
 
         public int FoodEaten
         {
-            get { return this.foodEaten; }
-            set { this.foodEaten = value; }
+            get { return this._foodEaten; }
+            set { this._foodEaten = value; }
         }
 
         public double Weight
         {
-            get { return this.weight; }
-            set { this.weight = value; }
+            get { return this._weight; }
+            set { this._weight = value; }
         }
 
         public string Name
         {
-            get { return this.name; }
-            set { this.name = value; }
+            get { return this._name; }
+            set { this._name = value; }
         }
 
         public abstract string MakeSound();

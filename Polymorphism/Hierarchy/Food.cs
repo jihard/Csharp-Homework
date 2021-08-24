@@ -4,7 +4,7 @@ namespace Hierarchy
 {
     public abstract class Food
     {
-        private int quantity;
+        private int _quantity;
 
         protected Food(int quantity)
         {
@@ -13,8 +13,8 @@ namespace Hierarchy
 
         public int Quantity
         {
-            get { return this.quantity; }
-            set { this.quantity = value; }
+            get { return this._quantity; }
+            set { this._quantity = value; }
         }
     }
 }

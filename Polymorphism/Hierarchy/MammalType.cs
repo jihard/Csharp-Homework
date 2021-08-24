@@ -4,7 +4,7 @@ namespace Hierarchy
 {
     public abstract class MammalType : Animal
     {
-        private string livingRegion;
+        private string _livingRegion;
 
         protected MammalType(string name, double weight, string livingRegion) 
         : base(name, weight)
@@ -14,8 +14,8 @@ namespace Hierarchy
 
         public string LivingRegion
         {
-            get { return this.livingRegion; }
-            set { this.livingRegion = value; }
+            get { return this._livingRegion; }
+            set { this._livingRegion = value; }
         }
     }
 }
