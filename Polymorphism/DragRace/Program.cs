@@ -4,21 +4,45 @@ namespace DragRace
 {
     class Program
     {
-        /**
- * Take a look at the cars in this solution.
- * 1. Extract common behaviour to an interface called Car, and use it in the all classes.
- * Which methods will be extracted with an empty body, and which can be default?
- * 2. Create two more cars of your own choice.
- * 3. As you see there is a possibility to use some kind of boost in Lexus, extract it to a new interface
-          and add that behaviour in one more car.
- * 4. Create one instance of an each car and add them to list.
- * 5. Iterate over the list 10 times, in the 3rd iteration use speed boost on the car if they have one.
- * 6. Print out the car name and speed of the fastest car
- */
-
         private static void Main(string[] args)
         {
-            
+            var vehicleList = new List<Car>();
+            var audi = new Audi();
+            vehicleList.Add(audi);
+            var bmw = new Bmw();
+            vehicleList.Add(bmw);
+            var lexus = new Lexus();
+            vehicleList.Add(lexus);
+            var tesla = new Tesla();
+            vehicleList.Add(tesla);
+            var toyota = new Toyota();
+            vehicleList.Add(toyota);
+            var subaru = new Subaru();
+            vehicleList.Add(subaru);
+
+            vehicleList.ForEach(item => item.StartEngine());
+           
+            for (var i = 1; i <= 10; i++)
+            {
+                for (int j = 0; j < vehicleList.Count; j++)
+                {
+                    Car item = vehicleList[j];
+                    item.SpeedUp();
+                    item.SlowDown();
+                    Console.WriteLine(item+ "--" +item.ShowCurrentSpeed());
+                    if (i == 3 && item is Nitro speedup)
+                    {
+                        speedup.UseNitrousOxideEngine();
+                    }
+                }
+            }
+
+            Dictionary<int, string> raceResults = new Dictionary<int, string>();
+
+            vehicleList.ForEach(item => raceResults.Add(int.Parse(item.ShowCurrentSpeed()), item.ModelName()));
+           
+            Console.WriteLine("Winner is:" +raceResults[raceResults.Keys.Max()]+", speed:" + raceResults.Keys.Max());
+            Console.ReadKey();
         }
     }
 }

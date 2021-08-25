@@ -2,28 +2,33 @@ using System;
 
 namespace DragRace
 {
-    public class Bmw
+    public class Bmw : Car
     {
-        private int currentSpeed = 0;
+        private int _currentSpeed = 0;
 
-        public void SpeedUp() 
+        public string ModelName()
         {
-            currentSpeed;
+            return "BMW X5";
         }
 
-        public void SlowDown() 
+        public void SpeedUp()
         {
-            currentSpeed;
+            _currentSpeed += 18;
         }
 
-        public string ShowCurrentSpeed() 
+        public void SlowDown()
         {
-            return currentSpeed.ToString();
+            _currentSpeed -= 9;
         }
 
-        public void StartEngine() 
+        public string ShowCurrentSpeed()
         {
-            Console.WriteLine("Rrrrrrr.....");
+            return _currentSpeed.ToString();
+        }
+
+        public void StartEngine()
+        {
+            Console.WriteLine("BMW X5: Rrrrrrr.....");
         }
     }
 }

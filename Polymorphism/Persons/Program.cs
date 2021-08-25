@@ -6,10 +6,10 @@ namespace Persons
     {
         static void Main(string[] args)
         {
-            /*
-             * - Create an instant of class Student and an instant of class Employee with proper values for the attributes.
-             * - Display the content of each class using Display() method.
-             */
+            Employee employee = new Employee("ALEX","Kaktus",37, "Atmodas iela  25","Butcher");
+            Student student = new Student("Kiborgs", "Spensor",22,"Frg rajons 13",5.0);
+            employee.DisplayEmployee();
+            student.DisplayStudent();
         }
     }
 }

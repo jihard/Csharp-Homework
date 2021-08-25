@@ -3,16 +3,16 @@ using System.Linq;
 
 namespace AdApp
 {
-    public class Campaign
+    class Campaign
     {
         private List<Advert> campaign;
 
-        public Campaign() 
+        public Campaign()
         {
             campaign = new List<Advert>();
         }
 
-        public void AddAdvert(Advert a) 
+        public void AddAdvert(Advert a)
         {
             campaign.Add(a);
         }
@@ -24,7 +24,10 @@ namespace AdApp
 
         public override string ToString()
         {
-            return "Advert Campaign" + campaign + "\nTotal Cost = "+ GetCost();
+            var campaigns = campaign.Select(c => c.ToString()).ToList();
+            Console.WriteLine("Advert campaign");
+            Console.WriteLine("----------------");
+            return string.Join(",", campaigns) + "\nTotal Cost = " + GetCost();
         }
     }
 }
