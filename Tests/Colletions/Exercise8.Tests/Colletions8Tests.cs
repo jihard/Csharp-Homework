@@ -34,9 +34,9 @@ namespace Exercise8.Tests
 
             // Act
             var actual = _testPhoneBook.PutNumber("", "22334422");
+
             // Assert
             Assert.AreEqual(expected, actual);
         }
     }
 }
-
