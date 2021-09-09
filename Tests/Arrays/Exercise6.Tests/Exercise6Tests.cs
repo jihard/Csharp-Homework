@@ -37,9 +37,9 @@ namespace Exercise6.Tests
         {
             //Arrange
             var arrayOfNumbers = new int[10];
+            var expectedValue = -7;
 
             //Act
-            var expectedValue = -7;
             var actual = ArrayExtension.CopyOriginalArray(arrayOfNumbers);
 
             //Assert

@@ -34,8 +34,8 @@ namespace Exercise5.Tests
 
         [DataTestMethod]
         [DataRow("apple is red", 3)]
-        [DataRow("apple\n isn't blue 6", 6)]
-        [DataRow("this\n isn't, right 6", 6)]
+        [DataRow("apple\n isn't blue ", 6)]
+        [DataRow("this\n isn't, right ", 6)]
         public void WordsToCount_FromText_ReturNumberOfWord(string text, int expected)
         {
             //Act

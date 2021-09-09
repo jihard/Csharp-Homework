@@ -10,11 +10,11 @@ namespace Exercise12.Tests
         {
             //Arrange
             Account account = new Account("John Doo", 1000000);
+            var expected = 999745;
 
             //Act
             var actual = account.Withdraw(255);
-            var expected = 999745;
-
+            
             //Assert
             Assert.AreEqual(expected, actual);
         }
@@ -24,10 +24,10 @@ namespace Exercise12.Tests
         {
             //Arrange
             Account account = new Account("John Doo", 1000);
+            var expected = 1100;
 
             //Act
             var actual = account.Deposit(100);
-            var expected = 1100;
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -38,10 +38,10 @@ namespace Exercise12.Tests
         {
             //Arrange
             Account account = new Account("John Doo", 100);
+            var expected = 100;
 
             //Act
             var actual = account.Balance();
-            var expected = 100;
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -52,10 +52,10 @@ namespace Exercise12.Tests
         {
             //Arrange
             Account account = new Account("John Doo", 100);
+            var expected = "John Doo:$100";
 
             //Act
             var actual = account.ToString();
-            var expected = "John Doo:$100";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -66,10 +66,10 @@ namespace Exercise12.Tests
         {
             //Arrange
             Account account = new Account("John Doo", -100);
+            var expected = "John Doo:$-100";
 
             //Act
             var actual = account.ToString();
-            var expected = "John Doo:$-100";
 
             //Assert
             Assert.AreEqual(expected, actual);

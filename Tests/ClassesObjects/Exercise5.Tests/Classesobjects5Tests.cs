@@ -10,11 +10,11 @@ namespace Exercise5.Tests
         {
             //Arrange
             DataExtensions _testdate = new DataExtensions(7, 21, 2021);
+            string expected = "Entered Date is: 7/21/2021";
 
             //Act
             var actual = _testdate.DisplayDate(7, 21, 2021);
-            string expected = "Entered Date is: 7/21/2021";
-
+            
             //Assert
             Assert.AreEqual(expected, actual);
         }

@@ -5,14 +5,14 @@ namespace Exercise6.Tests
     public class DogTests
     {
         [TestMethod]
-        public void MakeSound_ValidCat_MeowwwwExpected()
+        public void MakeSound_ValidDog_WooffExpected()
         {
             //Arrange
             Dog dog = new Dog("Spike", 23, "Streets");
+            var expected = " <Wooff! ";
 
             //Act
             var actual = dog.MakeSound();
-            var expected = " <Wooff! ";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -24,10 +24,10 @@ namespace Exercise6.Tests
             //Arrange
             Dog dog = new Dog("Spike", 23, "Streets");
             Food food = new Vegetable(3);
+            var expected = "Eat food.";
 
             //Act
             var actual = dog.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -39,26 +39,25 @@ namespace Exercise6.Tests
             //Arrange
             Dog dog = new Dog("Spike", 23, "Streets");
             Food food = new Meat(3);
+            var expected = "Eat food.";
 
             //Act
             var actual = dog.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ToString_MinkaCat11HomePersian_CatMinkaPersian11Home0Expected()
+        public void ToString_SpikeDog23Streets_DogSpike23StreetsFoodPieces0Expected()
         {
             //Arrange
             Dog dog = new Dog("Spike", 23, "Streets");
+            var expected = "Dog [Spike, 23, Streets, 0]";
 
             //Act
             var actual = dog.ToString();
-            var expected = "Dog [animal name-Spike, animal weight-23," +
-            " Region from-Streets, food pieces given-0]";
-
+   
             //Assert
             Assert.AreEqual(expected, actual);
         }

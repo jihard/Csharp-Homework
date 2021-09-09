@@ -12,10 +12,10 @@ namespace Exercise6.Tests
         {
             //Arrange
             Vegetable veg = new Vegetable(34);
+            var expected = "Vegetable";
 
             //Act
             var actual = veg.ToString();
-            var expected = "Vegetable";
 
             //Assert
             Assert.AreEqual(expected, actual);

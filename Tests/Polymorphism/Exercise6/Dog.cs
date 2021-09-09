@@ -32,7 +32,7 @@ namespace Exercise6
 
         public override string ToString()
         {
-            return $"{this.GetType().Name} [animal name-{this.Name}, animal weight-{this.Weight}, Region from-{this.LivingRegion}, food pieces given-{base.FoodEaten}]";
+            return $"{this.GetType().Name} [{this.Name}, {this.Weight}, {this.LivingRegion}, {base.FoodEaten}]";
         }
     }
 }

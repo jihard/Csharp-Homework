@@ -5,14 +5,14 @@ namespace Exercise6.Tests
     public class HorseTests
     {
         [TestMethod]
-        public void MakeSound_ValidCat_MeowwwwExpected()
+        public void MakeSound_ValidHorse_HorseSoundExpected()
         {
             //Arrange
             Horse horse = new Horse("Ken", 45, "Latvia");
+            var expected = " <Horse sound! ";
 
             //Act
             var actual = horse.MakeSound();
-            var expected = " <Horse sound! ";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -24,10 +24,10 @@ namespace Exercise6.Tests
             //Arrange
             Horse horse = new Horse("Ken", 45, "Latvia");
             Food food = new Vegetable(3);
+            var expected = "Eat food.";
 
             //Act
             var actual = horse.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -39,26 +39,25 @@ namespace Exercise6.Tests
             //Arrange
             Horse horse = new Horse("Ken", 45, "Latvia");
             Food food = new Meat(3);
+            var expected = "Eat food.";
 
             //Act
             var actual = horse.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ToString_MinkaCat11HomePersian_CatMinkaPersian11Home0Expected()
+        public void ToString_KenHorse45Latvia_HorseKen45Latvia0Expected()
         {
             //Arrange
             Horse horse = new Horse("Ken", 45, "Latvia");
+            var expected = "Horse [Ken, 45, Latvia, 0]";
 
             //Act
             var actual = horse.ToString();
-            var expected = "Horse [animal name-Ken, animal weight-45," +
-            " Region from-Latvia, food pieces given-0]";
-
+            
             //Assert
             Assert.AreEqual(expected, actual);
         }

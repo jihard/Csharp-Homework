@@ -14,8 +14,7 @@ namespace Exercise6
             {
                 return "CozaLoza ";
             }
-
-            if (number % 3 == 0 && number % 7 == 0)
+            else if (number % 3 == 0 && number % 7 == 0)
             {
                 return "CozaWoza ";
             }

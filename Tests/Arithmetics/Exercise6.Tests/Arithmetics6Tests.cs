@@ -8,10 +8,12 @@ namespace Exercise6.Tests
         [TestMethod]
         public void GetOutput_ReadsIndexOff5And3_ReturnsCozaLoza()
         {
-            // Act
-            var actual = PositionChecher.GetOutput(15);
+            //Arrange
             var expeted = "CozaLoza ";
 
+            // Act
+            var actual = PositionChecher.GetOutput(15);
+            
             // Assert
             Assert.AreEqual(actual, expeted);
         }
@@ -19,9 +21,11 @@ namespace Exercise6.Tests
         [TestMethod]
         public void GetOutput_ReadsIndexOf21_ReturnsCozaWoza()
         {
+            //Arrange
+            var expected = "CozaWoza ";
+
             // Act
             var actual = PositionChecher.GetOutput(21);
-            var expected = "CozaWoza ";
 
             //Assert
             Assert.AreEqual(actual, expected);
@@ -30,9 +34,11 @@ namespace Exercise6.Tests
         [TestMethod]
         public void GetOutput_ReadsIndexOf3_ReturnsCoza()
         {
+            //Arrange
+            var expeted = "Coza ";
+
             //Act
             var actual = PositionChecher.GetOutput(3);
-            var expeted = "Coza ";
 
             //Assert
             Assert.AreEqual(actual, expeted);
@@ -41,9 +47,11 @@ namespace Exercise6.Tests
         [TestMethod]
         public void GetOutput_ReadsIndexOf5_ReturnsLoza()
         {
+            //Arrange
+            var expeted = "Loza ";
+
             //Act
             var actual = PositionChecher.GetOutput(5);
-            var expeted = "Loza ";
 
             //Assert
             Assert.AreEqual(actual, expeted);
@@ -52,10 +60,12 @@ namespace Exercise6.Tests
         [TestMethod]
         public void GetOutput_ReadsIndexOf7_ReturnsWoze()
         {
-            //Act
-            var actual = PositionChecher.GetOutput(7);
+            //Arrange
             var expeted = "Woza ";
 
+            //Act
+            var actual = PositionChecher.GetOutput(7);
+            
             //Assert
             Assert.AreEqual(actual, expeted);
         }

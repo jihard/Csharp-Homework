@@ -6,14 +6,14 @@ namespace Exercise6.Tests
     public class TigerTests
     {
         [TestMethod]
-        public void MakeSound_ValidCat_MeowwwwExpected()
+        public void MakeSound_ValidTiger_ROOARRExpected()
         {
             //Arrange
             Tiger tiger = new Tiger("Tycon", "Asia", 45, "Siama");
+            var expected = " <ROOARR ";
 
             //Act
             var actual = tiger.MakeSound();
-            var expected = " <ROOARR ";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -25,10 +25,10 @@ namespace Exercise6.Tests
             //Arrange
             Tiger tiger = new Tiger("Tycon", "Asia", 45, "Siama");
             Food food = new Vegetable(3);
+            var expected = "Vegetable";
 
             //Act
             var actual = tiger.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -40,26 +40,25 @@ namespace Exercise6.Tests
             //Arrange
             Tiger tiger = new Tiger("Tycon", "Asia", 45, "Siama");
             Food food = new Meat(3);
+            var expected = "Vegetable";
 
             //Act
             var actual = tiger.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ToString_MinkaCat11HomePersian_CatMinkaPersian11Home0Expected()
+        public void ToString_TyconTiger45AsiaSiama_TigerTyconSiama45AsiaFoodPieces0Expected()
         {
             //Arrange
             Tiger tiger = new Tiger("Tycon", "Asia", 45, "Siama");
+            var expected = "Tiger [Tycon, Siama, 45, Asia, 0]";
 
             //Act
             var actual = tiger.ToString();
-            var expected = "Tiger [animal name-Tycon, animal breed-Siama, animal weight-45," +
-            " Region from-Asia, food pieces given-0]";
-
+            
             //Assert
             Assert.AreEqual(expected, actual);
         }

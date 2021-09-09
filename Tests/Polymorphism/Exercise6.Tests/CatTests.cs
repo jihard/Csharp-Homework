@@ -6,14 +6,14 @@ namespace Exercise6.Tests
     public class CatTests
     {
         [TestMethod]
-        public void MakeSound_ValidCat_MeowwwwExpected()
+        public void MakeSound_ValidCat_MjjauExpected()
         {
             //Arrange
             Cat cat = new Cat("Tom", "Home", 10, "Persian");
+            var expected = " <Mjjau ";
 
             //Act
             var actual = cat.MakeSound();
-            var expected = " <Mjjau ";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -25,10 +25,10 @@ namespace Exercise6.Tests
             //Arrange
             Cat cat = new Cat("Tom", "Home", 10, "Persian");
             Food food = new Vegetable(3);
+            var expected = "Eat food.";
 
             //Act
             var actual = cat.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
@@ -40,26 +40,25 @@ namespace Exercise6.Tests
             //Arrange
             Cat cat = new Cat("Tom", "Home", 10, "Persian");
             Food food = new Meat(3);
+            var expected = "Eat food.";
 
             //Act
             var actual = cat.Eat(food);
-            var expected = "Eat food.";
 
             //Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ToString_MinkaCat11HomePersian_CatMinkaPersian11Home0Expected()
+        public void ToString_TomCat10HomePersian_CatTomPersian10HomeFoodPieces0Expected()
         {
             //Arrange
-            Cat cat = new Cat("Tom", "Home", 10, "Persian");
+            Cat cat = new Cat("Tom","Home", 10, "Persian");
+            var expected = "Cat [Tom, Persian, 10, Home, 0]";
 
             //Act
             var actual = cat.ToString();
-            var expected = "Cat [animal name-Tom, animal breed-Persian," +
-            " animal weight-10, Region from-Home, food pieces given-0]";
-
+            
             //Assert
             Assert.AreEqual(expected, actual);
         }
